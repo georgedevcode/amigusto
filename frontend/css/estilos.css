@@ -129,6 +129,14 @@ header {
     font-size: 16px;
     color: #676767;
     clear: both; }
+  
+    .menu .container ul li{
+      display: inline;
+    }
+
+    .logo{
+      width: 30px;
+    }
 
 .main .galeria {
   overflow: hidden; }
@@ -183,6 +191,11 @@ header {
   text-align: center;
   margin-bottom: 20px; }
 
+.foto{
+  text-align: center;
+  margin:20px 0 20px 0;
+}
+
 @media screen and (max-width: 800px) {
   header .contenedor {
     position: static;
@@ -201,7 +214,9 @@ header {
 
   .main .acerca-de .foto {
     width: 100%;
-    position: relative; }
+    position: relative; 
+  }
+
   .main .acerca-de article {
     position: relative;
     width: 100%;

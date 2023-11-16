@@ -2,11 +2,34 @@
     <div class="contenedor">
       <nav class="menu .navbar">
         <div class="container">
-          <a href="index.php">Inicio</a>
-          <a href="acerca.php" id='btn-acerca-de'>Acerca de</a>
-          <a href="menu.php" id="btn-menu">Menú</a>
-          <a href="#" id="btn-galeria">Galería</a>
-          <a href="#" id='btn-ubicacion'>Ubicación</a>
+          <ul>
+            <li>
+              <a href="index.php">
+                <img src="img/logo.png" class="logo" alt="">
+              </a>
+            </li>
+            <li>
+              <a href="index.php">Inicio</a>
+            </li>
+            <li>
+              <a href="acerca.php" id='btn-acerca-de'>Acerca de</a>
+            </li>
+            <li>
+              <a href="menu.php" id="btn-menu">Menú</a>
+            </li>
+            <li>
+              <a href="#" id="btn-galeria">Servicios</a>
+            </li>
+            <li>
+              <a href="#" id='btn-ubicacion'>Contactenos</a>
+            </li>
+            <li>
+              <a href="#" id='btn-registro'>Registrarte</a>
+            </li>
+            <li>
+              <a href="#" id='btn-login'>Login</a>
+            </li>
+          </ul>
         </div>
       </nav>
       <div class="textos container">

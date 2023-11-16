@@ -19,10 +19,10 @@
         <img src="img/acerca-de.jpg" alt="">
       </div>
       <article>
-        <h3>Acerca de</h3>
-        <p>Misión: En nuestro restaurante, nos dedicamos a ofrecer experiencias gastronómicas excepcionales a nuestros clientes. Nuestro compromiso es crear deliciosos platos con ingredientes frescos y de alta calidad, servidos con calidez y hospitalidad. Buscamos convertir cada comida en un momento inolvidable y satisfacer los paladares más exigentes, promoviendo al mismo tiempo la sostenibilidad y el bienestar en nuestra comunidad."</p>
-        <p>"Visión: Ser reconocidos como el restaurante de referencia en nuestra ciudad, conocido por nuestra excelencia culinaria, nuestro compromiso con los ingredientes locales y nuestra dedicación a la satisfacción del cliente. Esperamos expandir nuestra presencia y convertirnos en un destino gastronómico de renombre a nivel regional, manteniendo siempre nuestros valores de calidad, sostenibilidad y servicio excepcional."</p>
-        <p>Valores de la empresa: Liderazgo, responsabilidad, calidad, colaboración, responsabilidad social</p>
+        <h1>Acerca de</h1>
+        <p><h3>Misión:</h3> En nuestro restaurante, nos dedicamos a ofrecer experiencias gastronómicas excepcionales a nuestros clientes. Nuestro compromiso es crear deliciosos platos con ingredientes frescos y de alta calidad, servidos con calidez y hospitalidad. Buscamos convertir cada comida en un momento inolvidable y satisfacer los paladares más exigentes, promoviendo al mismo tiempo la sostenibilidad y el bienestar en nuestra comunidad."</p>
+        <p><h3>Visión:</h3> Ser reconocidos como el restaurante de referencia en nuestra ciudad, conocido por nuestra excelencia culinaria, nuestro compromiso con los ingredientes locales y nuestra dedicación a la satisfacción del cliente. Esperamos expandir nuestra presencia y convertirnos en un destino gastronómico de renombre a nivel regional, manteniendo siempre nuestros valores de calidad, sostenibilidad y servicio excepcional."</p>
+        <p><h3>Valores de la empresa:</h3> Liderazgo, responsabilidad, calidad, colaboración, responsabilidad social</p>
       </article>
     </div>
   </section>
