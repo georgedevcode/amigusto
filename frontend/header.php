@@ -30,7 +30,7 @@
               <a href="menu.php" id="btn-menu">Menú</a>
             </li>
             <li>
-              <a href="#" id="btn-servicios">Servicios</a>
+              <a href="servicios.php" id="btn-servicios">Servicios</a>
             </li>
             <li>
               <a href="contactenos.php" id='btn-contactenos'>Contactenos</a>
