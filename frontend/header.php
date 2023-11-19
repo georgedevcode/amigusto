@@ -46,7 +46,7 @@
       </nav>
       <div class="textos container">
         <h1 class="nombre">"A mi gusto" | <span>Restaurante</span></h1>
-        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum magnam sed, ratione tempore asperiores aperiam.</h3>
+        <h3>Buenos amigos, buen café y buenos tiempos.</h3>
       </div>
     </div>
   </header>
