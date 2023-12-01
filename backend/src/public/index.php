@@ -2,26 +2,23 @@
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
 
-    include '../../vendor/adodb/adodb-php/adodb.inc.php';
+    require '../../vendor/adodb/adodb-php/adodb.inc.php';
     require '../../vendor/autoload.php';
     
     //Variables de conexion de MySQL
     $driver = 'mysqli';
     $database = "amigustodb";
-    $host = "localhost:8080";
+    $host = "localhost";
     $user = "root";
     $password = "mysql";
 
     function dbConexion(){
 
         //Conexion a la base de datos
-        $db = newAdoConnection($GLOBALS['driver']);
+        $db = newAdoConnection("mysqli");
 
         $db->connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
-
-        if($db->isConnected())
-            echo "<script>Console.log('Connected to DB')</script>";
-
+        
         return $db;
     }
     $app = new \Slim\App;
@@ -30,7 +27,7 @@
         
         $conx = dbConexion();
 
-        $query = "SELECT * FROM 'tmenu'";
+        $query = "SELECT * FROM `tmenu`";
 
         $conx->SetFetchMode(ADODB_FETCH_ASSOC);
 

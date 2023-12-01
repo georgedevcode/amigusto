@@ -10,7 +10,7 @@
               <div class="contenedor-menu2">
                 <article id="platillos">
                   <p class="categoria">Especiales:</p>
-                  <div class="platillo">
+                  <!-- <div class="platillo">
                     <p class="nombre">Sandwich jamon y queso</p>
                     <p class="precio">₡3500</p>
                     <p class="description">Pan a escoger,jamon de pavo, queso americano, lechuga, tomate y salsas.</p>
@@ -33,7 +33,7 @@
                     <p class="precio">₡2500</p>
                     <p class="description">Tres leches, pie de limon, Queque de fresa, Tamal de elote.</p>
                     <p class="tiempo"></p>
-                  </div>
+                  </div> -->
                 </article>
                 <article id="bebidas">
                   <p class="categoria">Cafés:</p>
