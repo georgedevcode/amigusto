@@ -8,7 +8,7 @@
             <h3 class="titulo" id='platillos'>Menú</h3>
             <div class="contenedor-menu">
               <div class="contenedor-menu2">
-                <article id="platillos">
+                <article id="platillos-menu">
                   <p class="categoria">Especiales:</p>
                   <!-- <div class="platillo">
                     <p class="nombre">Sandwich jamon y queso</p>
@@ -35,9 +35,9 @@
                     <p class="tiempo"></p>
                   </div> -->
                 </article>
-                <article id="bebidas">
+                <article id="bebidas-menu">
                   <p class="categoria">Cafés:</p>
-                  <div class="platillo">
+                  <!-- <div class="platillo">
                     <p class="nombre">Café Negro</p>
                     <p class="precio">₡1000</p>
                     <p class="description">Café de altura.</p>
@@ -60,7 +60,7 @@
                     <p class="precio">₡2100</p>
                     <p class="description">Café expresso, leche, crema irlandesa, helado a escoger.</p>
                     <p class="tiempo"></p>
-                  </div>
+                  </div> -->
                 </article>
               </div>
             </div>

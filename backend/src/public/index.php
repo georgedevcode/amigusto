@@ -39,6 +39,22 @@
 
     });
 
+    $app->get('/getdrinks', function(Request $request, Response $response, array $args){
+        
+        $conx = dbConexion();
+
+        $query = "SELECT * FROM `tbebidas`";
+
+        $conx->SetFetchMode(ADODB_FETCH_ASSOC);
+
+        $sqlData = $conx->GetAll($query);
+
+        $response->getBody()->write(json_encode($sqlData));
+
+        return $response;
+
+    });
+
    
 
     $app->get("/hello", function (Request $request, Response $response, array $args){
