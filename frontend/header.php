@@ -12,41 +12,46 @@
 <body>
 <header>
     <div class="contenedor">
-      <nav class="menu .navbar">
+      <nav class="menu">
         <div class="container">
-          <ul>
-            <li>
-              <a href="index.php">
-                <img src="img/logo.png" class="logo" alt="">
-              </a>
-            </li>
-            <li>
-              <a href="index.php">Inicio</a>
-            </li>
-            <li>
-              <a href="acerca.php" id='btn-acerca-de'>Acerca de</a>
-            </li>
-            <li>
-              <a href="menu.php" id="btn-menu">Menú</a>
-            </li>
-            <li>
-              <a href="servicios.php" id="btn-servicios">Servicios</a>
-            </li>
-            <li>
-              <a href="contactenos.php" id='btn-contactenos'>Contactenos</a>
-            </li>
-            <li>
-              <a href="#" id='btn-registro'>Registrarte</a>
-            </li>
-            <li>
-              <a href="#" id='btn-login'>Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="textos container">
-        <h1 class="nombre">"A mi gusto" | <span>Restaurante</span></h1>
-        <h3>Buenos amigos, buen café y buenos tiempos.</h3>
-      </div>
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">
+                  <img src="img/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                </a>
+                <div class="collapse navbar-collapse" id="navbarText">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="index.php">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="acerca.php">Acerca de</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="menu.php">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="servicios.php" class="nav-link">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="contactenos.php" class="nav-link">Contactenos</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Registrarte</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">Login</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <div class="textos container">
+              <h1 class="nombre">"A mi gusto" | <span>Restaurante</span></h1>
+              <h3>Buenos amigos, buen café y buenos tiempos.</h3>
+            </div>
     </div>
   </header>
