@@ -2,25 +2,10 @@
     use \Psr\Http\Message\ServerRequestInterface as Request;
     use \Psr\Http\Message\ResponseInterface as Response;
 
-    require '../../vendor/adodb/adodb-php/adodb.inc.php';
     require '../../vendor/autoload.php';
+    require 'dbconexion.php';
+    require 'authenticate.php';
     
-    //Variables de conexion de MySQL
-    $driver = 'mysqli';
-    $database = "amigustodb";
-    $host = "localhost";
-    $user = "root";
-    $password = "mysql";
-
-    function dbConexion(){
-
-        //Conexion a la base de datos
-        $db = newAdoConnection("mysqli");
-
-        $db->connect($GLOBALS['host'], $GLOBALS['user'], $GLOBALS['password'], $GLOBALS['database']);
-        
-        return $db;
-    }
     $app = new \Slim\App;
 
     $app->get('/getmenu', function(Request $request, Response $response, array $args){
@@ -52,6 +37,20 @@
         $response->getBody()->write(json_encode($sqlData));
 
         return $response;
+
+    });
+
+    $app->post('/userauthenticate', function(Request $request, Response $response, array $args){
+
+        $conx = dbConexion();
+
+        $userData = $request->getParsedBody();
+
+        $username = $userData["username"];
+
+        $password = $userData["password"];
+
+        return $response->getbody()->write(authenticateUser($username, $password, $conx));
 
     });
 

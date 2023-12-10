@@ -15,6 +15,14 @@ body {
     margin: auto;
     overflow: hidden; }
 
+footer{
+  background: #000;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
 header {
   width: 100%;
   background: #281a0c;
@@ -198,6 +206,10 @@ header {
 
 #comentarios{
   width: 100%;
+}
+
+.admin-login{
+  margin: 50px 0 100px 0;
 }
 
 @media screen and (max-width: 800px) {
