@@ -270,7 +270,7 @@ footer .copyright span {
     letter-spacing: 0.3rem;
     font-weight: 300; }
 
-#contactenos-form{
+#contactenos-form, #registro-usuario{
   padding: 100px;
 }
 

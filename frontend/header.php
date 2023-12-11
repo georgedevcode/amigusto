@@ -40,10 +40,10 @@
                       <a href="contactenos.php" class="nav-link">Contactenos</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Registrarte</a>
+                      <a href="registro.php" class="nav-link">Registrarte</a>
                     </li>
                     <li class="nav-item">
-                      <a href="#" class="nav-link">Login</a>
+                      <a href="login.php" class="nav-link">Login</a>
                     </li>
                   </ul>
                 </div>

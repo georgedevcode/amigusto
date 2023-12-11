@@ -46,11 +46,25 @@
 
         $userData = $request->getParsedBody();
 
-        $username = $userData["username"];
+        $userName = $userData["username"];
 
         $password = $userData["password"];
 
-        return $response->getbody()->write(authenticateUser($username, $password, $conx));
+        return $response->getbody()->write(authenticateUser($userName, $password, $conx));
+
+    });
+
+    $app->post('/userregister', function(Request $request, Response $response, array $args){
+
+        $conx = dbConexion();
+
+        $userData = $request->getParsedBody();
+
+        $result = $conx->AutoExecute("tusuarios", $userData, "INSERT");
+
+        $response->getBody()->write($result);
+
+        return $response;
 
     });
 
