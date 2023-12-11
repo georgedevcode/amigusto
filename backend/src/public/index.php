@@ -5,8 +5,11 @@
     require '../../vendor/autoload.php';
     require 'dbconexion.php';
     require 'authenticate.php';
-    
+    require 'email.php';
+
     $app = new \Slim\App;
+
+    $app->config('debug','true');
 
     $app->get('/getmenu', function(Request $request, Response $response, array $args){
         
@@ -65,6 +68,24 @@
         $response->getBody()->write($result);
 
         return $response;
+
+    });
+
+    $app->post('/sendemail', function(Request $request, Response $response, array $args){
+
+        $emailData = $request->getParsedBody();
+        
+        $senderName = $emailData['nombre'];
+
+        $senderLastName = $emailData['apellidos'];
+
+        $senderEmail = $emailData['correo'];
+
+        $senderMessage = $emailData['comentarios'];
+
+        $result = sendEmail($senderName, $senderLastName, $senderEmail, $senderMessage);
+
+        $response->getBody()->write($result);
 
     });
 
