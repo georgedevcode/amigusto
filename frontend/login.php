@@ -3,6 +3,7 @@
   ?>
     <div class="main container">
         <form class="user-login" method="post" action="http://localhost:8080/amigusto/backend/src/public/userauthenticate">
+          <p>Ingresa tu usuario y contraseña</p>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Usuario</label>
                 <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username">

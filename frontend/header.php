@@ -47,7 +47,7 @@
 
                       if (isset($_SESSION["userLoggedIn"]) or isset($_SESSION["adminLoggedIn"])) {
                           echo '<li class="nav-item">
-                                  <a href="login.php" class="nav-link">Logout</a>
+                                  <a href="logout.php" class="nav-link">Logout</a>
                               </li>';
                       }else{
                         echo '<li class="nav-item">
