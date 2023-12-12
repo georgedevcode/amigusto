@@ -9,8 +9,6 @@
 
     $app = new \Slim\App;
 
-    $app->config('debug','true');
-
     $app->get('/getmenu', function(Request $request, Response $response, array $args){
         
         $conx = dbConexion();
@@ -43,6 +41,33 @@
 
     });
 
+    $app->post('/adminauthenticate', function(Request $request, Response $response, array $args){
+
+        $conx = dbConexion();
+
+        $userData = $request->getParsedBody();
+
+        $userName = $userData["username"];
+
+        $password = $userData["password"];
+
+        $result = authenticateAdmin($userName, $password, $conx);
+
+        if ($result) {
+
+            $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/admin-dashboard.php");
+
+            $GLOBALS["userLoggedIn"] = $userName;
+
+        }else{
+
+            $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/acceso-denegado.php");
+
+        }
+
+        return $response;
+    });
+
     $app->post('/userauthenticate', function(Request $request, Response $response, array $args){
 
         $conx = dbConexion();
@@ -53,8 +78,21 @@
 
         $password = $userData["password"];
 
-        return $response->getbody()->write(authenticateUser($userName, $password, $conx));
+        $result = authenticateUser($userName, $password, $conx);
 
+        if ($result) {
+
+            $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/user-profile.php");
+
+            $GLOBALS["userLoggedIn"] = $userName;
+
+        }else{
+
+            $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/acceso-denegado.php");
+
+        }
+
+        return $response;
     });
 
     $app->post('/userregister', function(Request $request, Response $response, array $args){
