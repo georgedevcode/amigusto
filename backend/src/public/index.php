@@ -56,6 +56,8 @@
         if ($result) {
 
             $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/admin-dashboard.php");
+            
+            session_start();
 
             $_SESSION["adminLoggedIn"] = $userName;
 
@@ -84,6 +86,8 @@
 
             $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/user-profile.php");
 
+            session_start();
+            
             $_SESSION["userLoggedIn"] = $userName;
 
         }else{
