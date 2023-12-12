@@ -1,7 +1,15 @@
 <?php
     include("header.php");
 ?>
-<h1>User profile</h1>
+    <div class="container">
+        <p>Informacion de usuario:</p>
+    </div>
+    <div class="container">
+        <p>Pedidos</p>
+    </div>
+    <div class="container">
+        <p>Historial de pedidos</p>
+    </div>
 <?php
     include("footer.php");
 ?>

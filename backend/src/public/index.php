@@ -7,7 +7,14 @@
     require 'authenticate.php';
     require 'email.php';
 
-    $app = new \Slim\App;
+    $config = [
+        'settings' => [
+            'displayErrorDetails' => true,
+            // Other settings
+        ],
+    ];
+
+    $app = new \Slim\App($config);
 
     $app->get('/getmenu', function(Request $request, Response $response, array $args){
         
@@ -140,6 +147,28 @@
             return $response->getBody()->write($userLoggedIn);
 
         }
+
+    });
+
+    $app->post('/neworder', function(Request $request, Response $response, array $args){
+        
+        $conx = dbConexion();
+    
+        $data = $request->getParsedBody();
+    
+        $order = json_encode($data['order']);
+    
+        $usuario = $_SESSION['userLoggedIn'];
+    
+        $tiempo = array_sum(array_column($data['order'], 'tiempo'));
+    
+        $completado = false;
+    
+        $sql = "INSERT INTO tpedidos VALUES ($order, $usuario , $tiempo, $completado)";
+    
+        $conx->execute($sql);
+    
+        return $response->withStatus(200);
 
     });
 
