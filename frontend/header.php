@@ -42,6 +42,7 @@
                     <li class="nav-item">
                       <a href="registro.php" class="nav-link">Registrarte</a>
                     </li>
+                    
                     <?php
                        session_start();
 
@@ -55,9 +56,6 @@
                               </li>';
                       }
                      ?>
-                    <!-- <li class="nav-item">
-                      <a href="login.php" class="nav-link">Login</a>
-                    </li> -->
                   </ul>
                 </div>
               </div>
