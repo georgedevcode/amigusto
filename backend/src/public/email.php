@@ -68,7 +68,7 @@
         // Email set up
         $mail->setFrom('amigusto@info.com','amigusto');
         $mail->addAddress($senderEmail, $senderName);
-        $mail->Subject = "Comentario: $senderName";
+        $mail->Subject = "Comentario: $senderName + $senderLastName";
         $mail->isHTML(true);
         $mail->Body = $senderMessage;
         $result = $mail->send();
