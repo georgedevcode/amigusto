@@ -57,7 +57,7 @@
 
             $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/admin-dashboard.php");
 
-            $GLOBALS["userLoggedIn"] = $userName;
+            $_SESSION["adminLoggedIn"] = $userName;
 
         }else{
 
@@ -84,7 +84,7 @@
 
             $response = $response->withStatus(302)->withHeader("Location","http://localhost:8080/amigusto/frontend/user-profile.php");
 
-            $GLOBALS["userLoggedIn"] = $userName;
+            $_SESSION["userLoggedIn"] = $userName;
 
         }else{
 
@@ -127,15 +127,16 @@
 
     });
 
-   
+    $app->get('isuserloggedin', function(Request $request, Response $response, array $args){
 
-    $app->get("/hello", function (Request $request, Response $response, array $args){
-         
-        // $name = $args['name'];
+        $userLoggedIn = $GLOBALS["userLoggedIn"];
 
-        $response->getBody()->write("Hello, World!");
+        if (!empty($userLoggedIn)) {
 
-        return $response;
+            return $response->getBody()->write($userLoggedIn);
+
+        }
+
     });
 
     $app->run();

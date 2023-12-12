@@ -42,9 +42,22 @@
                     <li class="nav-item">
                       <a href="registro.php" class="nav-link">Registrarte</a>
                     </li>
-                    <li class="nav-item">
+                    <?php
+                       session_start();
+
+                      if (isset($_SESSION["userLoggedIn"]) or isset($_SESSION["adminLoggedIn"])) {
+                          echo '<li class="nav-item">
+                                  <a href="login.php" class="nav-link">Logout</a>
+                              </li>';
+                      }else{
+                        echo '<li class="nav-item">
+                                  <a href="login.php" class="nav-link">Login</a>
+                              </li>';
+                      }
+                     ?>
+                    <!-- <li class="nav-item">
                       <a href="login.php" class="nav-link">Login</a>
-                    </li>
+                    </li> -->
                   </ul>
                 </div>
               </div>

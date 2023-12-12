@@ -212,6 +212,10 @@ header {
   margin: 50px 0 100px 0;
 }
 
+.user-login{
+  padding: 100px;
+}
+
 @media screen and (max-width: 800px) {
   header .contenedor {
     position: static;
