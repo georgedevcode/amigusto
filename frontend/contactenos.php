@@ -2,7 +2,7 @@
     include "header.php";
   ?>
   <div class="main container">
-    <form id="contactenos-form" action="email.php" method="post">
+    <form id="contactenos-form" action="http://localhost:8080/amigusto/backend/src/public/sendemail" method="post">
         <h3>Ponte en contacto!</h3>
         <div class="mb-3">
             <label for="text" class="form-label">Nombre:</label>

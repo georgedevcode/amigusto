@@ -58,12 +58,12 @@
         
         // SMTP configuration settings
         $mail = new PHPMailer();
-        $mail->IsSMTP();
+        $mail->isSMTP();
         $mail->Host = 'sandbox.smtp.mailtrap.io';
         $mail->SMTPAuth = true;
-        $mail->Username = '07cf338e314d88';
-        $mail->Password = 'e9b345ec2d5f2c';
         $mail->Port = 2525;
+        $mail->Username = '5321b36e8d11ed';
+        $mail->Password = '5d7d9891d3fdfd';
 
         // Email set up
         $mail->setFrom('amigusto@info.com','amigusto');
