@@ -2,7 +2,7 @@
     include "header.php";
   ?>
   <div class="main container">
-    <form id="contactenos-form" action="http://localhost:8080/amigusto/backend/src/public/sendemail" method="post">
+    <form id="contactenos-form" method="post" action="send-email.php">
         <h3>Ponte en contacto!</h3>
         <div class="mb-3">
             <label for="text" class="form-label">Nombre:</label>
@@ -25,5 +25,6 @@
   </div>
 
   <?php
+
     include "footer.php";
   ?>       

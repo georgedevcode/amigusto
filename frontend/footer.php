@@ -23,9 +23,6 @@
     case 'registro':
       echo '<script src="js/userRegister.js"></script>';
     
-    case 'contactenos':
-      echo '<script src="js/email.js"></script>';
-    
     default:
       # code...
       break;
