@@ -190,5 +190,21 @@
 
     });
 
+    $app->get("/allusersinfo", function(Request $request, Response $response, array $args){
+
+        $conx = dbConexion();
+
+        $sql = "SELECT * FROM tusuarios WHERE rol='usuario'";
+
+        $conx->SetFetchMode(ADODB_FETCH_ASSOC);
+        
+        $sqlData = $conx->GetAll($sql);
+        
+        $response->getBody()->write(json_encode(($sqlData)));
+        
+        return $response;
+
+    });
+
     $app->run();
 ?>

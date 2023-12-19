@@ -26,6 +26,9 @@
     case 'user-profile':
       echo '<script src="js/userInfo.js"></script>';
     
+    case "admin-dashboard":
+      echo '<script src="js/allUsersInfo.js"></script>';
+    
     default:
       # code...
       break;

@@ -1,7 +1,14 @@
 <?php
-      if (session_status() == PHP_SESSION_NONE or isset($_SESSION["userLoggedIn"])) {
-          session_start();
-          $user = $_SESSION["userLoggedIn"];
+    session_start();
+
+    if (isset($_SESSION["userLoggedIn"])) {
+
+        $user = $_SESSION["userLoggedIn"];
+
+    }else if(isset($_SESSION["adminLoggedIn"])){
+
+      $adminUser = $_SESSION['adminLoggedIn'];
+
     }
 ?>
 
