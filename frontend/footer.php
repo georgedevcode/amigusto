@@ -22,6 +22,9 @@
     
     case 'registro':
       echo '<script src="js/userRegister.js"></script>';
+
+    case 'user-profile':
+      echo '<script src="js/userInfo.js"></script>';
     
     default:
       # code...

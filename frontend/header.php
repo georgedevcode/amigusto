@@ -1,3 +1,10 @@
+<?php
+      if (session_status() == PHP_SESSION_NONE or isset($_SESSION["userLoggedIn"])) {
+          session_start();
+          $user = $_SESSION["userLoggedIn"];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,13 +46,19 @@
                     <li class="nav-item">
                       <a href="contactenos.php" class="nav-link">Contactenos</a>
                     </li>
-                    <li class="nav-item">
-                      <a href="registro.php" class="nav-link">Registrarte</a>
-                    </li>
-                    
                     <?php
-                       session_start();
-
+                        if (isset($_SESSION["userLoggedIn"])) {
+                          echo '<li class="nav-item">
+                                  <a href="user-profile.php" class="nav-link">Perfil</a>
+                              </li>';
+                      }else{
+                        echo '<li class="nav-item">
+                                <a href="registro.php" class="nav-link">Registrarte</a>
+                              </li>';
+                      }
+                    ?>
+                  
+                    <?php
                       if (isset($_SESSION["userLoggedIn"]) or isset($_SESSION["adminLoggedIn"])) {
                           echo '<li class="nav-item">
                                   <a href="logout.php" class="nav-link">Logout</a>
